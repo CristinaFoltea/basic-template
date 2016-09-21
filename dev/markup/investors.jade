@@ -1,0 +1,98 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/investors.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Investors
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header 
+            | Swift Navigation announced in December 2015 that it raised an $11 million 
+            | series-A round led by Lior Susan and Pierre Lamond of Eclipse, with participation 
+            | from New Enterprise Associates and Promus Ventures. Series-A participants from the 
+            | original seed round include First Round Capital, Felicis Ventures, Fall Line Capital,
+            | Qualcomm Ventures and Lemnos Labs. To date, the company has raised a total of 
+            | $13.6 million in funding.
+      
+      .article-list
+        .article-list__wrapper
+          ul.article-list__items
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_eclipse-ventures.jpg)")
+              .article-list__content
+                h4.article-list__header Eclipse
+                p.article-list__text
+                  | Lior Susan, formerly with Formation8, and Pierre Lamond, long-time semiconductor industry veteran, formed Eclipse in 2015 and invest in hardware-focused companies
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_fall-line-capital.jpg)")
+              .article-list__content
+                h4.article-list__header Fall Line Capital
+                p.article-list__text
+                  | Reinventing investment in broadacre farmland and agricultural technologies, Fall Line Capital’s focus is realizing untapped productivity in farmland.
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_felicis-ventures.jpg)")
+              .article-list__content
+                h4.article-list__header Felicis Ventures
+                p.article-list__text
+                  | Felicis Ventures is a boutique venture fund that backs the world’s iconic companies of today and tomorrow, focusing on five key areas—mobile, e-commerce, enterprise, education and health.
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_first-round-capital.jpg)")
+              .article-list__content
+                h4.article-list__header First Round Capital
+                p.article-list__text
+                  | First Round Capital is a San Francisco-based seed-stage venture firm focused on building a vibrant community of technology entrepreneurs and companies.
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_lemnos-labs.jpg)")
+              .article-list__content
+                h4.article-list__header Lemnos Labs
+                p.article-list__text
+                  | Lemnos wants to be the first investor in a hardware startup, providing capital and hands-on expertise and blending the best elements of a seed-stage firm and incubator.
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_nea.jpg)")
+              .article-list__content
+                h4.article-list__header New Enterprise Associates
+                p.article-list__text
+                  | NEA is a global venture firm. With more than $18 billion in investments, NEA ranks as the world’s largest venture firm.
+            li.article-list__item
+              a.article-list__link(href="#")
+              .article-list__image(style="background-image: url(/images/investors_promus-ventures.jpg)")
+              .article-list__content
+                h4.article-list__header Promus Ventures
+                p.article-list__text
+                  | Promus Ventures invests in early-stage software companies that are changing the world.
+            li.article-list__item
+              a.article-list__link(href="#")
+                .article-list__image(style="background-image: url(/images/investors_qualcomm-ventures.jpg)")
+              .article-list__content
+                h4.article-list__header Qualcomm Ventures
+                p.article-list__text
+                  | Qualcomm Ventures is the investment arm of Qualcomm Inc. (NASDAQ: QCOM), a Fortune 500 company with operations across the globe. Swift was the winner of the QPrize™—Qualcomm Ventures’ seed investment competition.
+            li.article-list__item
+              a.article-list__link(href="#")
+                .article-list__image(style="background-image: url(/images/investors_vegas-tech-fund.jpg)")
+              .article-list__content
+                h4.article-list__header Vegas Tech Fund
+                p.article-list__text
+                  | Vegas Tech Fund is a seed-stage investment fund focused on investing in founders and startups solving huge problems.
+
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

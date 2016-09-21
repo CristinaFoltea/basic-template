@@ -1,0 +1,16 @@
+{
+  "name": "deployment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Jordan Sullivan",
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
+    "gulp-sass": "2.1.0",
+    "gulp-jade": "1.1.0",
+    "gulp.spritesmith": "4.2.4",
+    "gulp-sequence": "0.4.1",
+    "browser-sync": "^2.11.0"
+  }
+}

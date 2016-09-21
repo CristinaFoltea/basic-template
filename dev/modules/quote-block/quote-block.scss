@@ -1,0 +1,43 @@
+@import '../../sass/module-includes';
+.quote-block{ position: relative; width:100%; padding-bottom: 36%;
+  @include responsive(xl){ padding: 0; height: 600px; }
+  @include responsive(lg){ padding-bottom: 55%; }
+  @include responsive(md){ padding:0; height:auto; }
+}
+.quote-block__wrapper{ @include fill-parent(); background: $grey-darker right center no-repeat; background-size:cover; @include responsive-bumpers();
+  &:before{content: ''; display: block; @include fill-parent(); z-index: z-layer(base); @include linear-gradient(to right, transparentize($grey-darker, 0.5), transparentize($grey-darker, 1), $fallback: transparent); }
+  @include responsive(md){ position: relative; padding-top:40px; padding-bottom:40px; height:auto;
+    &:before{@include linear-gradient(to right, transparentize($grey-darker, 0.2), transparentize($grey-darker, 0.7), $fallback: transparent); }
+  }
+}
+.quote-block__container{ position: relative; width: 100%; max-width: $max-width; height: 100%; margin:0 auto; z-index: z-layer(base, +1); @include ghost-center('.quote-block__content'); text-align: left; }
+.quote-block__content{ position: relative; width: 50%; padding-top:32px; padding-left:10px; color: $white;
+  &:before{content: ''; display: block; width: 34px; height: 28px; position: absolute; top: 0; left: 10px; @include sprite(quotes, 1);}
+  @include responsive(sm){ width:100%; }
+}
+.quote-block__text{ margin-top:0; @include font-secondary; font-weight:400; font-size:24px; line-height: 1.4;
+  &:after{ content: '\201D'; }
+  @include responsive(lg){font-size:20px;}
+  @include responsive(md){font-size:18px;}
+}
+.quote-block__name{display: block; @include font-secondary; font-weight:800; font-size:18px; }
+.quote-block__relation{display: block; margin-top:4px; @include font-secondary; font-weight:400; font-size:15px;}
+
+
+
+//modifiers:
+.quote-block.quote-block--right-align{
+  .quote-block__wrapper{ background-position: left center; }
+  .quote-block__container{ text-align: right; }
+  .quote-block__content{ text-align: left; padding-left:0; padding-right:10px;
+    &:before{ left:0; }
+  }
+}
+
+//effects:
+.quote-block__content:before{ @include transition(all 600ms $ease-out-quad); @include transform(translate3d(-30px,-30px,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.quote-block__text, .quote-block__name, .quote-block__relation{ @include transition(all 800ms $ease-out-quad); @include transform(translate3d(30px,0,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

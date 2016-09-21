@@ -1,0 +1,35 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/solutions-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Solutions
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header 
+            | In the automated future, the navigation capabilities of autonomous vehicles, 
+            | devices and machines will demand high precision, stability and flexibility.
+          p.header-and-text__text
+            | Whether your project requires automated navigation on land, in the water, or in the air, 
+            | Swift’s software-based approach and RTK solutions offer the optimal combination of accuracy, 
+            | low cost and flexibility for your projects. Swift is enabling a world where fields farm themselves, 
+            | drones fly and land safely and autonomous transportation can take you home.
+      
+
+      include ../modules/image-grid/image-grid.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

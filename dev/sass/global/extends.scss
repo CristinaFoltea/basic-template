@@ -1,0 +1,16 @@
+@mixin responsive-bumpers{
+  @include responsive(lg){
+    padding-left:40px;
+    padding-right:40px;
+  }
+  @include responsive(xs){
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
+
+@mixin module-spacing{
+  padding-top:20px;
+  padding-bottom:20px;
+  @include responsive(sm){padding-top:10px; padding-bottom: 10px;}
+}

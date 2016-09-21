@@ -1,0 +1,54 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/auto-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Automotive
+            
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Automated navigation is becoming a must-have feature in vehicles ranging from automobiles and construction vehicles to a growing number of autonomous vehicles. Whether seeking to save fuel, reduce maintenance costs, locate equipment, improve safety, add autonomous functionality or reduce risk, automakers and navigation OEMs can reduce solution costs and improve product flexibility with Swift.
+          
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_open-source.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Enable New Solutions
+                p.column-blurbs__text 
+                  | Swift open source RTK solutions provide unprecedented flexibility to tailor features to specific markets or use cases, such as automated vehicle heading. Improved monitoring accuracy. And more effective robotic systems control. Our open platform enables firmware upgrades and feature changes quickly.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_small-form-factor.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Small, Efficient Footprint
+                p.column-blurbs__text 
+                  | Our sleek 53x53mm size makes it easier to fit sophisticated navigation capabilities into smaller form factors. Get high-precision accuracy and future-proofed flexibility in a compact footprint.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_affordability-and-flexibility.png")
+              .column-blurbs__content
+                h4.column-blurbs__header High-Volume Affordability
+                p.column-blurbs__text 
+                  | At a fraction of the cost of hardware-based, traditional GPS solutions, Swift solutions make it possible to achieve new functionality while maintaining profitability.
+      
+      .generic-content.generic-content--center
+        .generic-content__wrapper
+          .generic-content__content
+            a.anim-button(href="contact.html") Contact Swift
+            | &nbsp;or&nbsp;
+            a.anim-button(href="store-landing.html") Buy Piksi
+            
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

@@ -1,0 +1,16 @@
+@import '../../sass/module-includes';
+.store-tiles{ width:100%; @include responsive-bumpers; padding-top:20px; }
+.store-tiles__wrapper{ width:100%; max-width:$max-width; margin:0 auto; padding:0 80px;
+  @include responsive(md){ padding:0; }
+}
+.store-tiles__items{ margin: 0; padding: 0; width: 100%; text-align: center; }
+.store-tiles__item{ display: inline-block; width:49.5%; padding:20px;
+  @include responsive(sm){ width:100%; padding:10px 0; }
+}
+.store-tiles__item-container{ position: relative; width:100%; height:100%; @include ghost-center('.store-tiles__title'); text-align: center; height:200px; overflow:hidden; }
+.store-tiles__image{ @include fill-parent(); background: $grey-darker center no-repeat; background-size:cover; z-index: z-layer(abyss); @include transition(all 600ms $ease-out-quint);
+  .store-tiles__item:hover &{ @include transform(scale3d(1.05,1.05,1)); }
+}
+.store-tiles__title{ @include font-secondary; font-weight:400; color: $white; font-size:32px; padding:20px; margin:0;}
+.store-tiles__link{ @include anchor-fill();}
+.store-tiles__cta{ display: block;width: 100%; text-align: center; margin:40px 0; }

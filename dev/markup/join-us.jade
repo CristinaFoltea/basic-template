@@ -1,0 +1,74 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/join-us-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Join Us
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Who we are
+          .header-and-text__text 
+            p We’re a team of flyers and coders, hackers and chefs. We like hard problems and solving them with the sharpest people. Our team is true full stack, from pushing electrons to pulling requests. Our customers rely on us to keep their cars on the road, drones in the sky and satellites in orbit.
+            p We are here to lay the foundation for a future of autonomous robotics on land, at sea, in the sky and in space. We need trailblazers to join our team. Want to make a difference? Join Swift.
+            a.anim-button(href="#") Explore Job Openings
+            
+      .full-width-image(style="background-image: url(/images/life-at-swift.jpg)")
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Life @ Swift
+      
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_salary-benefits.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Salary, Benefits, Options
+                p.column-blurbs__text 
+                  | Swift offers a competitive salary along with great medical, dental and vision insurance packages through your choice of several popular providers and plans. Every Swift employee is a stockowner of the company, so we can all share in our collective success.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_vacation.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Unlimited Vacation
+                p.column-blurbs__text 
+                  | We are dedicated to our employees and value work/life balance, so we offer unlimited vacation days.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_public-transport.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Close to Public Transport
+                p.column-blurbs__text 
+                  | Our office is located in the Dogpatch district of San Francisco, two blocks from the 22nd Street Caltrain station, right on the Muni T line—which connects directly to Embarcadero BART and two blocks from Highway 280. There is a lot of innovation occurring in the Dogpatch, a new startup hub of SF.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_events.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Team Events
+                p.column-blurbs__text 
+                  | Our close-knit team is often found together, whether it be collaborating during hackathons, cooking together in our fully- stocked kitchen, or hanging out during our routine BBQs and company-sponsored team lunches. We also offer mentorship connections and tech talks to stimulate the intellectual and professional growth of our employees.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_open-culture.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Open Culture
+                p.column-blurbs__text 
+                  | From our vacation policy to “spend money like it is your own” approach to expenses, we minimize process overhead to maximize performance, autonomy and individual impact. This enables a very open and collaborative culture at Swift.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_laptop.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Laptop of Your Choice
+                p.column-blurbs__text 
+                  | Are you Mac or PC? At Swift, you’ll fit in either way, with lots of choices on your laptop, workstation setup, development tools and more.
+                      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

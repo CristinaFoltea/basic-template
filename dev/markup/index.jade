@@ -1,0 +1,18 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      include ../modules/slide-hero/slide-hero.jade
+      include ../modules/header-and-text/header-and-text.jade
+      include ../modules/infographic/infographic.jade
+      include ../modules/double-cta/double-cta.jade
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

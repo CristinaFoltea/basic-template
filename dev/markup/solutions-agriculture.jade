@@ -1,0 +1,56 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/ag-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Agriculture
+            
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Agriculture is taking the next leap forward with the ability to automate vehicles and implements. Whether built into navigation systems or added as after-market capabilities, Swift’s RTK solutions can help improve fuel usage, monitor fertilizer and seed placement, track equipment and aid navigation-focused tasks.
+      
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_affordability-and-flexibility.png")
+              .column-blurbs__content
+                h4.column-blurbs__header High-Volume Affordability
+                p.column-blurbs__text 
+                  | At a fraction of the cost of hardware- based, traditional GPS solutions, Swift solutions make it possible to achieve new functionality while maintaining profitability.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_minimize-risk.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Minimizing Risk
+                p.column-blurbs__text 
+                  | Minimize the risk of solution failure with Swift. We design for a broad range of field conditions to help ensure project success. A low cost with the ability to upgrade software later delivers further assurance and future proofing.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_small-form-factor.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Small, Efficient Footprint
+                p.column-blurbs__text 
+                  | Our sleek 53x53mm size makes it easier to fit sophisticated navigation capabilities into smaller form factors. Get high-precision accuracy and future-proofed flexibility in a compact footprint.
+      
+      .generic-content.generic-content--center
+        .generic-content__wrapper
+          .generic-content__content
+            a.anim-button(href="contact.html") Contact Swift
+            | &nbsp;or&nbsp;
+            a.anim-button(href="store-landing.html") Buy Piksi
+      
+      include ../modules/quote-block/quote-block.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

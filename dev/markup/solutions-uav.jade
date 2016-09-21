@@ -1,0 +1,56 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/uav-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline UAV
+            
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Unmanned aerial vehicles are proliferating today—they can perform work too expensive or hazardous for a human, and they enable new business models, driving the next generation of precision agriculture and construction management.
+          p.header-and-text__text Swift Navigation’s RTK solutions can help UAV service providers increase service quality and profitability. Swift enables you to achieve high-precision orthomosaics for agriculture, construction, environmental and energy projects. Our open source software accelerates solution development to give you a competitive advantage.
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_centimeter-accuracy.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Improve Vehicle Guidance
+                p.column-blurbs__text 
+                  | Many of today’s most exciting autonomous vehicle innovations simply cannot go to market with a GPS receiver priced in the thousands of dollars. At Piksi’s price point, it can be used in large-scale deployments.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_improve-quality.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Improve Output Quality
+                p.column-blurbs__text 
+                  | High-precision RTK technology increases the quality of final orthomosaics to help improve decision-making. With the accuracy of a centimeter, imagery stitching can be exponentially more precise.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_improve-responsiveness.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Improve Responsiveness
+                p.column-blurbs__text 
+                  | Launch tailored surveys faster to improve customer satisfaction and expedite results.
+      
+      .generic-content.generic-content--center
+        .generic-content__wrapper
+          .generic-content__content
+            a.anim-button(href="contact.html") Contact Swift
+            | &nbsp;or&nbsp;
+            a.anim-button(href="store-landing.html") Buy Piksi
+      
+      include ../modules/quote-block/quote-block.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

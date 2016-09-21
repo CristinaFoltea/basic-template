@@ -1,0 +1,4 @@
+@mixin font-global{}
+
+@mixin font-primary(){ @include font-global(); font-family: 'Roboto', sans-serif; }
+@mixin font-secondary(){ @include font-global(); font-family: 'Roboto Condensed', sans-serif;}

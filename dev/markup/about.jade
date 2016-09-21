@@ -1,0 +1,36 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/about.jpg)")
+          .static-hero__content
+            h2.static-hero__headline About Us
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header 
+            | Swift Navigation was started by our three determined founders, who set 
+            | out to make GPS positioning technology more accurate, more affordable and more open.
+          p.header-and-text__text
+            | Founded in 2012, Swift today partners with our customers, providing support for individual products up
+            | to large-scale projects. Additional services include general hardware 
+            | and software support, custom hardware development based on our modular design, 
+            | custom software and on-site testing and integration.
+            | And we’re just getting started.
+      
+      include ../modules/full-width-image/full-width-image.jade
+      include ../modules/double-column-text/double-column-text.jade
+      include ../modules/double-cta/double-cta.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

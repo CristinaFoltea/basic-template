@@ -1,0 +1,16 @@
+@import '../../sass/module-includes';
+
+.generic-content{ width: 100%; overflow:hidden; margin-bottom:60px; margin-top:20px;}
+.generic-content__wrapper{ width: 100%; max-width: $max-width; margin: 0 auto; @include responsive-bumpers; }
+.generic-content__content{ width:100%; font-size:18px; line-height:1.5;}
+
+
+//modifiers:
+.generic-content--center{text-align: center;}
+
+
+
+//content:
+.generic-content__content{ @include transition(all 500ms $ease-out-quad); @include transform(translate3d(0,10px,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

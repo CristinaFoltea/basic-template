@@ -1,0 +1,19 @@
+@import '../../sass/module-includes';
+.contact-form{ width: 100%; @include module-spacing; overflow:hidden;}
+.contact-form__wrapper{ width: 100%; max-width: $max-width; margin: 0 auto; @include clearfix; @include responsive-bumpers;}
+.contact-form__extra-container,
+.contact-form__form-container{ width:50%; float:left;
+  > *:first-child{margin-top:0;}
+  @include responsive(md){ width:100%; float:none; margin-bottom:40px;}
+}
+.contact-form__extra-container{ padding-right:40px; }
+
+
+//effects
+
+.contact-form__extra-container,
+.contact-form__form-container{ @include transition(all 800ms $ease-out-quint); opacity: 0;
+  &.contact-form__extra-container{@include transform(translate3d(0,60px,0));}
+  &.contact-form__form-container{@include transform(translate3d(60px,0,0));}
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

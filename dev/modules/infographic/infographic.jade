@@ -1,0 +1,29 @@
+.infographic
+	.infographic__wrapper
+		// Optional: <h3 class="infographic__header">Header Text</h3> 
+		.infographic__main-container
+			.infographic__image-container
+				img.infographic__image(src="/images/product-1.png")
+			ul.infographic__blurbs
+				li.infographic__blurb
+					img.infographic__blurb-image(src="/images/icon_centimeter-accuracy.png")
+					p.infographic__blurb-info Centimeter-accurate relative positioning (Carrier phase RTK)
+				li.infographic__blurb
+					img.infographic__blurb-image(src="/images/icon_low-power-consumption.png")
+					p.infographic__blurb-info Low power consumption: 500mW typical
+				li.infographic__blurb
+					img.infographic__blurb-image(src="/images/icon_open-source.png")
+					p.infographic__blurb-info Open-source software and board design
+				li.infographic__blurb
+					img.infographic__blurb-image(src="/images/icon_small-form-factor.png")
+					p.infographic__blurb-info Small form factor: <br/> 53x53mm
+		.infographic__summation
+			a.anim-button(href="#") Learn More
+			| &nbsp; or &nbsp;
+			a.anim-button(href="#") Buy Piksi
+
+
+// Notes: 
+// - Icons must be square. 60x60 for standard resolution, 120x120 for Retina. 
+// - For best sizing and content alignment, ensure product images are cropped to the edge, and maintain a square or close-to-square ratio. 
+// - This component, due to complex responsive layout requirements, can not support any more than 2 product images. A 3rd image WILL break this component. 

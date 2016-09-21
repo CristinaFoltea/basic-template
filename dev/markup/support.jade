@@ -1,0 +1,58 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/support-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Support
+            
+    
+      .column-blurbs.column-blurbs--force-two-columns
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_technical-questions.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Technical Questions
+                p.column-blurbs__text 
+                  | Learn how to use, integrate and modify Piksi for your use case. Watch our <a href="#">Getting Started</a> video and learn the answers to the most common questions on our <a href="#">FAQ</a>.          
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_open-source-documentation.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Open Source Documentation
+                p.column-blurbs__text 
+                  | We also participate in an open ecosystem, publishing our documentation, prices and support resources online. Find our documentation <a href="#">here</a>.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_user-forum.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Visit our User Forum
+                p.column-blurbs__text 
+                  | Join the discussion and learn from others who have integrated Swift’s RTK solutions into their own use cases. Hear from Swift experts and keep informed of latest updates on the Swift User Forum.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_speak-dev.png")
+              .column-blurbs__content
+                h4.column-blurbs__header We Speak Dev
+                p.column-blurbs__text 
+                  | Our open source software allows you to integrate Swift solutions quickly and more easily into your development projects. The Swift Binary Protocol (SBP) communicates with Swift devices and is accompanied by language- agnostic SBP specification and documentation, a compiler, APIs and client libraries in languages including Python, C, Haskell and Java. Need more support? The Swift engineering team can also help you with integration or help you troubleshoot issues. Use the contact form below to inquire about integration support or sign up to attend our office hours.
+
+      hr.nudge-up-20
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Order Questions
+          .header-and-text__text Does your question relate to an existing order?
+                                
+      include ../modules/contact-form/contact-form.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

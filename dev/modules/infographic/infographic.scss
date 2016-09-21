@@ -1,0 +1,48 @@
+@import '../../sass/module-includes';
+.infographic{ width:100%; @include responsive-bumpers; @include module-spacing; overflow-x: hidden;
+  @include responsive(sm){ padding-top:20px; }
+}
+.infographic__wrapper{ position: relative; width: 100%; max-width: $max-width; margin-left: auto; margin-right:auto; @include clearfix; }
+.infographic__header{ display: block; text-align: center; color: $orange; font-size:24px; margin-bottom:40px; }
+.infographic__main-container{ position: relative; @include clearfix; }
+
+.infographic__image-container{  display: block; position: absolute; left:31%; width:38%; height:100%; @include clearfix;
+  @include responsive(lg){ position: relative; width: 100%; left:auto; margin: 0 auto 40px auto; text-align: center; }
+}
+.infographic__image{ display: inline-block; width:95%; height:auto;
+    &:nth-child(1){ padding-bottom:20px; }
+  @include responsive(lg){ width:50%;
+    &:nth-child(2){ float:right; }
+  }
+  @include responsive(sm){
+    &:nth-child(1){ float:none; }
+    &:nth-child(2){ float:none; }
+  }
+}
+
+
+.infographic__blurbs, .infographic__blurbs--right{ float:left; width:28%; margin: 0; padding: 0;
+  &.infographic__blurbs--right{ float:right; }
+  @include responsive(lg){ width:49%; }
+  @include responsive(sm){ width:100%; float:none; }
+}
+
+.infographic__blurb{ list-style: none; text-align: center; margin-bottom:50px; }
+.infographic__blurb-image{ display: inline-block; width:60px; height:60px; height:auto; }
+.infographic__blurb-info{ width:100%; font-size:18px; @include font-secondary; max-width: 230px; display: block; margin: 10px auto;
+  @include responsive(sm){ max-width:200px; }
+}
+.infographic__summation{ clear:both; text-align: center; margin-top:40px; }
+
+
+//effects:
+.infographic__blurb{ @include transition(all 850ms $ease-out-quint); @include transform(translate3d(-100px,0,0)); opacity: 0; @include transition-sequence(100ms, 10);
+  .infographic__blurbs--right &{ @include transform(translate3d(100px,0,0)); }
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.infographic__blurb-image{@include transition(all 1000ms 300ms $ease-out-quint); @include transform( scale3d(0.5,0.5,0.5));
+  .js-in-view &{ @include transform(scale3d(1,1,1)); }
+}
+.infographic__image{ @include transition(all 1200ms $ease-out-quint); @include transform(translate3d(0,50px,0) scale3d(0.9,0.9,0.9)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0) scale3d(1,1,1)); opacity: 1; }
+}

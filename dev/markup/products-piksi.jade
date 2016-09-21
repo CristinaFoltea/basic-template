@@ -1,0 +1,74 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/piksi-2.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Introducing Piksi
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header 
+            | Piksi is designed for autonomous vehicle and device guidance, aerial surveying and other use cases requiring high precision GPS/GNSS. It delivers RTK functionality for centimeter-level relative positioning accuracy in a 53x53mm form factor. The Piksi receiver supports high-performance, onboard Digital Signal Processor (DSP) and a flexible correlation accelerator.
+      
+
+      .infographic
+        .infographic__wrapper
+          h3.infographic__header Features
+          .infographic__main-container
+            .infographic__image-container
+              img.infographic__image(src="/images/piksi-angled-1.jpg")
+              img.infographic__image(src="/images/piksi-angled-2.jpg")
+              //- .infographic__image(style='background-image:url("/images/product-1.png")')
+            ul.infographic__blurbs
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_centimeter-accuracy.png")
+                p.infographic__blurb-info Centimeter-accurate relative positioning (Carrier phase RTK)
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_10-hertz-solutions.png")
+                p.infographic__blurb-info 10 Hz position/velocity/time solutions for fast updates
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_open-source.png")
+                p.infographic__blurb-info Open-source software and board design
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_low-power-consumption.png")
+                p.infographic__blurb-info Low power consumption: 500mW typical
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_small-form-factor.png")
+                p.infographic__blurb-info Small form factor: <br/> 53x53mm
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_dual-connectivity.png")
+                p.infographic__blurb-info USB and dual UART connectivity
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_full-rate-pass-through.png")
+                p.infographic__blurb-info Full-rate raw sample pass-through over USB
+              li.infographic__blurb
+                img.infographic__blurb-image(src="/images/icon_support-and-signal.png")
+                p.infographic__blurb-info 3-bit, 16.368 MS/s L1 front-end supports GPS, GLONASS, Galileo and SBAS signals
+          .infographic__summation
+            a.anim-button(href="#") Download the Data Sheet
+
+
+
+      .quote-block
+        .quote-block__wrapper(style="background-image:url(/images/generic-hero.jpg)")
+          .quote-block__container
+            .quote-block__content
+              p.quote-block__text 
+                | The UAV industry can greatly benefit from Swift’s advances in precision navigation and control. Piksi’s centimeter-level accuracy provides a huge advantage in safe operation, vehicle guidance and landing and more accurate collection of aerial data.
+              span.quote-block__name Jonathan Downey
+              span.quote-block__relation Founder & CEO, Airware
+
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

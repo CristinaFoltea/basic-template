@@ -1,0 +1,79 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+.static-hero {
+  position: relative;
+  width: 100%;
+  padding-bottom: 36%;
+  margin-bottom: 40px; }
+  @media (min-width: 1600px) {
+    .static-hero {
+      padding: 0;
+      height: 600px; } }
+  @media (max-width: 1100px) {
+    .static-hero {
+      padding-bottom: 55%; } }
+
+.static-hero__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333E47 no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding: 0 40px; }
+  .static-hero__wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; }
+  .static-hero__wrapper .static-hero__content {
+    display: inline-block;
+    vertical-align: middle; }
+  @media (max-width: 619px) {
+    .static-hero__wrapper {
+      padding: 0 20px; } }
+
+.static-hero__content {
+  padding-top: 40px; }
+  @media (max-width: 1100px) {
+    .static-hero__content {
+      padding-top: 50px; } }
+  @media (max-width: 767px) {
+    .static-hero__content {
+      padding-top: 60px; } }
+  @media (max-width: 619px) {
+    .static-hero__content {
+      padding-top: 0; } }
+
+.static-hero__headline {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #FFF;
+  margin: 0 0 10px 0; }
+  @media (max-width: 1100px) {
+    .static-hero__headline {
+      font-size: 50px; } }
+  @media (max-width: 767px) {
+    .static-hero__headline {
+      font-size: 44px; } }
+  @media (max-width: 619px) {
+    .static-hero__headline {
+      font-size: 32px; } }
+  @media (max-width: 419px) {
+    .static-hero__headline {
+      font-size: 26px; } }

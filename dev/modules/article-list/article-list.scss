@@ -1,0 +1,28 @@
+@import '../../sass/module-includes';
+
+.article-list{ width: 100%; overflow:hidden; margin-bottom:80px; margin-top:20px;}
+.article-list__wrapper{ width: 100%; max-width: $max-width; margin: 0 auto; @include responsive-bumpers;}
+.article-list__items{display: block; width: 100%; margin: 0; padding: 0; @include clearfix;}
+.article-list__item{display: block; position: relative; list-style: none; border-top:1px solid $grey; padding:20px 0;
+  &:last-child{border-bottom: 1px solid $grey;}
+}
+.article-list__image{position: absolute; width:20%; height:80%; top: 10%; left: 5%; background: transparent center no-repeat; background-size:contain; @include transition(all 800ms $ease-out-quint);
+  @include responsive(sm){display: none;}
+  .article-list__item:hover &{ @include transform(scale3d(1.025,1.025,1)); };
+}
+.article-list__content{padding-left: 30%; padding-top:20px; padding-bottom:20px;
+  @include responsive(sm){ padding: 20px; }
+}
+.article-list__link{ @include anchor-fill(); }
+.article-list__header{font-size:18px; @include font-secondary; font-weight:800; color: $orange; margin-bottom:5px; margin-top:0; @include transition(color 500ms $ease-out-quint);
+  .article-list__item:hover &{color: $grey-darker};
+}
+.article-list__byline{display: block; font-size:15px; @include font-secondary; font-weight:400; }
+.article-list__text{display: block; font-size:15px; @include font-primary; font-weight:400; margin-top:10px; line-height:1.5; margin-bottom:0;}
+
+
+//effects
+.article-list__item{ @include transition(all 600ms $ease-out-quad); @include transform(translate3d(30px,0,0)); opacity: 0;
+  &:nth-child(odd){@include transform(translate3d(-30px,0,0));}
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

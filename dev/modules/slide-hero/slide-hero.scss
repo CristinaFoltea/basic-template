@@ -1,0 +1,75 @@
+@import '../../sass/module-includes';
+
+.slide-hero{width:100%; margin-bottom:40px;}
+.slide-hero__wrapper{width:100%; background-color: $black;}
+.slide-hero__aspect{position: relative; width:100%; padding-bottom:50%; @include transition(padding 600ms 200ms $ease-out-quint);}
+.slide-hero__view{@include fill-parent(); height:100%; overflow:hidden;}
+.slide-hero__slides{@include fill-parent(); margin: 0; padding: 0;  z-index:z-layer(base);}
+.slide-hero__slide{ position: absolute; list-style:none; margin:0; @include fill-parent(); text-align: center; background-position: center center; background-size:cover; background-repeat: no-repeat; @include ghost-center('.slide-hero__content');}
+
+//------------  Content Area:
+
+.slide-hero__content{ color: $white;  max-width:70%;
+  @include responsive(md){
+    br{display:none;}
+  }
+}
+.slide-hero__headline{font-size:60px; margin-bottom:7px; margin-top:0; @include font-secondary(); line-height:1.1;
+  @include responsive(xl){font-size:72px;}
+  @include responsive(lg){font-size:48px;}
+  @include responsive(md){font-size:36px;}
+  @include responsive(sm){font-size:28px;}
+  @include responsive(xs){font-size:18px;}
+}
+.slide-hero__blurb{font-size:28px; margin-bottom:20px; margin-top:0; @include font-secondary();
+  @include responsive(xl){font-size:32px;}
+  @include responsive(lg){font-size:24px;}
+  @include responsive(md){font-size:18px;}
+  @include responsive(sm){font-size:14px;}
+  @include responsive(xs){font-size:11px;}
+ }
+
+
+//------------  Paddles:
+
+.slide-hero__paddle{ position:absolute; z-index: z-layer(base, +1); width:60px; height:75px; top:50%; margin-top:-30px; right:2.5%; cursor: pointer;
+  &:before, &:after{ content:""; display: block; position: absolute; margin:0; top:30px; left:30px; height:24px; width:2px; background-color: $white; @include transition(all 800ms $ease-out-quint);}
+  &:before{top:24px; @include transform(rotate(-45deg));}
+  &:after{top:40px; @include transform(rotate(45deg));}
+  &:hover{
+    &:before, &:after{height:24px;}
+    &:before{@include transform(rotate(-210deg) translate3d(-6px, -1px, 0px));}
+    &:after{@include transform(rotate(210deg) translate3d(-6px, 1px, 0px));}
+  }
+}
+.slide-hero__paddle[data-direction="left"]{ right: auto; left:2.5%; @include transform(rotate(180deg)); margin-top:-17px;}
+.slide-hero__paddle[data-direction="down"]{ right: auto; left:50%; top: auto; bottom:1%; margin-left:-30px; @include transform(rotate(90deg) scale(0.6));
+  @include responsive(md){ display: none; }
+  &:hover{
+    &:before, &:after{ background-color: $orange; }
+  }
+ }
+
+
+//------------  Slide behiavior:
+
+  .slide-hero__slide{ visibility:hidden; z-index:z-layer(base);
+    &.js-slide-next, &.js-slide-prev{ visibility:visible; z-index:z-layer(base, +1);
+      .slide-hero__content{ }
+    }
+    &.js-slide-next{ @include transform(translate3d(100%,0,0));
+      .slide-hero__content{@include transform(translate3d(250px,0,0));}
+    }
+    &.js-slide-prev{ @include transform(translate3d(-100%,0,0));
+      .slide-hero__content{@include transform(translate3d(-250px,0,0));}
+    }
+    &.js-active{visibility:visible; @include transform(translate3d(0,0,0)); @include transition(all 600ms $ease-out-quint);
+      .slide-hero__content{@include transform(translate3d(0,0,0)); opacity: 1; @include transition(all 1000ms $ease-out-quint);}
+    }
+  }
+
+
+
+//testing
+
+.slide-hero__slide{}

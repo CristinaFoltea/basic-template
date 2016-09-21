@@ -1,0 +1,162 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+.column-list {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media (max-width: 619px) {
+    .column-list {
+      padding-top: 10px;
+      padding-bottom: 10px; } }
+
+.column-list__wrapper {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto; }
+  @media (max-width: 1100px) {
+    .column-list__wrapper {
+      padding-left: 40px;
+      padding-right: 40px; } }
+  @media (max-width: 419px) {
+    .column-list__wrapper {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.column-list__header {
+  display: block;
+  margin-top: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 24px;
+  color: #FF8300;
+  text-align: center;
+  line-height: 1.5; }
+
+.column-list__items {
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding: 0 40px;
+  margin-top: 30px; }
+  .column-list__items::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media (max-width: 419px) {
+    .column-list__items {
+      padding: 0; } }
+
+.column-list__item-column {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  float: left;
+  padding: 0 20px; }
+  @media (max-width: 767px) {
+    .column-list__item-column {
+      width: 100%; } }
+
+.column-list__item {
+  position: relative;
+  margin-bottom: 10px;
+  list-style: none; }
+  .column-list__item:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    position: absolute;
+    left: -15px;
+    top: 9px;
+    background-color: #333E47; }
+
+.column-list__header {
+  -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translate3d(0, -20px, 0);
+  -moz-transform: translate3d(0, -20px, 0);
+  -ms-transform: translate3d(0, -20px, 0);
+  -o-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  opacity: 0; }
+  .js-in-view .column-list__header {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+
+.column-list__item {
+  -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transform: translate3d(0, 30px, 0);
+  -moz-transform: translate3d(0, 30px, 0);
+  -ms-transform: translate3d(0, 30px, 0);
+  -o-transform: translate3d(0, 30px, 0);
+  transform: translate3d(0, 30px, 0);
+  opacity: 0; }
+  .column-list__item:nth-child(1) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    transition-delay: 50ms; }
+  .column-list__item:nth-child(2) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms; }
+  .column-list__item:nth-child(3) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    transition-delay: 150ms; }
+  .column-list__item:nth-child(4) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    transition-delay: 200ms; }
+  .column-list__item:nth-child(5) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    transition-delay: 250ms; }
+  .column-list__item:nth-child(6) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    transition-delay: 300ms; }
+  .column-list__item:nth-child(7) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    transition-delay: 350ms; }
+  .column-list__item:nth-child(8) {
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    transition-delay: 400ms; }
+  .column-list__item:nth-child(9) {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    transition-delay: 450ms; }
+  .column-list__item:nth-child(10) {
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    transition-delay: 500ms; }
+  .column-list__item:nth-child(11) {
+    -webkit-transition-delay: 550ms;
+    -moz-transition-delay: 550ms;
+    transition-delay: 550ms; }
+  .js-in-view .column-list__item {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }

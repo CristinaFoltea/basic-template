@@ -1,0 +1,58 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/generic-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Software Platform
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header 
+            | Swift Navigation software powers autonomous vehicle navigation, helping 
+            | vehicles understand and accurately travel the world. By moving GPS positioning from expensive, 
+            | closed and proprietary hardware offered by alternative GPS providers to a flexible software-based receiver, 
+            | using off-the-shelf components, Swift delivers RTK GPS that is 100 times more accurate than 
+            | the GPS in a cell phone at a fraction of the price of the competition.
+        
+      
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_price-point-scale.png")
+              .column-blurbs__content
+                h4.column-blurbs__header At a Price Point that Scales
+                p.column-blurbs__text 
+                  | Many of today’s most exciting autonomous vehicle innovations simply cannot go to market with a GPS receiver priced in the thousands of dollars. At Piksi’s price point, it can be used in large-scale deployments.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_faster-integration.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Enabling Faster Integration
+                p.column-blurbs__text 
+                  | With frequent firmware releases, our customers can easily customize Piksi to the particular demands of their applications, speed system integration and greatly reduce host system overhead. Piksi also uses the same open source GNSS libraries as Peregrine, Swift’s GNSS post-processing software. Combining the two solutions delivers a powerful toolset for GNSS experimentation 
+                  | and prototyping at every level—from raw samples to highly accurate positioning solutions. With these tools, developers can quickly move from prototyping software on the bench to running it standalone on the Piksi receiver within their device.
+
+      .quote-block
+        .quote-block__wrapper(style="background-image:url(/images/generic-hero.jpg)")
+          .quote-block__container
+            .quote-block__content
+              p.quote-block__text 
+                | The UAV industry can greatly benefit from Swift’s advances in precision navigation and control. Piksi’s centimeter-level accuracy provides a huge advantage in safe operation, vehicle guidance and landing and more accurate collection of aerial data.
+              span.quote-block__name Jonathan Downey
+              span.quote-block__relation Founder & CEO, Airware
+
+
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

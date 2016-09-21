@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Module Test</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <nav class="navigation">
+        <div class="navigation__wrapper">
+          <div class="navigation__mobile-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <h1 class="navigation__logo">
+             
+            Swift Navigation<a href="/" class="navigation__logo-link"></a>
+          </h1>
+          <ul class="navigation__ext-links">
+            <li class="navigation__ext-link"><a href="#">My Account</a></li>
+            <li class="navigation__ext-link"><a href="#">Register</a></li>
+            <li class="navigation__ext-link"><a href="#">Login</a></li>
+          </ul>
+          <ul class="navigation__pri-links">
+            <li class="navigation__pri-link"><a href="#">Products</a>
+              <ul class="navigation__sec-links">
+                <li class="navigation__sec-link"><a href="#">Piksi</a></li>
+                <li class="navigation__sec-link"><a href="#">Platform</a></li>
+              </ul>
+            </li>
+            <li class="navigation__pri-link"><a href="#">Solutions</a>
+              <ul class="navigation__sec-links">
+                <li class="navigation__sec-link"><a href="#">UAV</a></li>
+                <li class="navigation__sec-link"><a href="#">Automotive</a></li>
+                <li class="navigation__sec-link"><a href="#">Robotics</a></li>
+                <li class="navigation__sec-link"><a href="#">Agriculture</a></li>
+                <li class="navigation__sec-link"><a href="#">Survey & Control</a></li>
+              </ul>
+            </li>
+            <li class="navigation__pri-link"><a href="#">Store</a></li>
+            <li class="navigation__pri-link"><a href="#">About</a>
+              <ul class="navigation__sec-links">
+                <li class="navigation__sec-link"><a href="#">Leadership</a></li>
+                <li class="navigation__sec-link"><a href="#">Team</a></li>
+                <li class="navigation__sec-link"><a href="#">Investors</a></li>
+                <li class="navigation__sec-link"><a href="#">News</a></li>
+                <li class="navigation__sec-link"><a href="#">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="navigation__pri-link"><a href="#">Join Us</a></li>
+            <li class="navigation__pri-link"><a href="#">Support</a></li>
+            <li class="navigation__pri-link"><a href="#">Contact</a></li>
+            <li class="navigation__seperate"></li>
+            <li class="navigation__pri-link"><a data-social="twitter" href="#"></a></li>
+            <li class="navigation__pri-link"><a data-social="linkedin" href="#"></a></li>
+            <li class="navigation__pri-link"><a data-social="github" href="#"></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Notes: -->
+      <!-- - Use "active" class on the pri-link you want to be underlined -->
+      <div class="static-hero">
+        <div style="background-image: url(/images/contact-hero.jpg)" class="static-hero__wrapper">
+          <div class="static-hero__content">
+            <h2 class="static-hero__headline">Contact Us</h2>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="contact-form__wrapper">
+          <div class="contact-form__extra-container">
+            <h3>Technical Questions?</h3>
+            <p>Please Review the <a href="#">FAQ</a> and <a href="#">Documentation</a></p>
+            <p>If your question isn’t answered above, please ask your question in our <a href="#">community forum</a>.</p>
+          </div>
+          <div class="contact-form__form-container">
+            <h3>Other Inquiries?</h3>
+            <form>
+              <fieldset>
+                <input name="first" type="text" placeholder="First Name">
+                <input name="last" type="text" placeholder="Last Name">
+              </fieldset>
+              <input name="company" type="text" placeholder="Company">
+              <fieldset>
+                <input name="email" type="email" placeholder="E-mail">
+                <input name="phone" type="ph" placeholder="Phone">
+              </fieldset>
+              <label for="entity">Entity Type</label>
+              <div class="custom-select">
+                <select name="entity">
+                  <option value="individial">Individual</option>
+                  <option value="individial">Organization</option>
+                </select>
+              </div>
+              <label for="projected">Application</label>
+              <div class="custom-select">
+                <select name="entity">
+                  <option value="academic">Academic Project</option>
+                  <option value="professional">Professional Project</option>
+                </select>
+              </div>
+              <label for="volume">Projected Volume</label>
+              <div class="custom-select">
+                <select name="volume">
+                  <option value="1_10">1-10</option>
+                  <option value="10_50">10-50</option>
+                  <option value="50_100">50-100</option>
+                  <option value="100_1000">100-1000</option>
+                  <option value="1000">1000+</option>
+                </select>
+              </div>
+              <label for="question">How Can We Help You?</label>
+              <textarea name="question"></textarea>
+              <div class="custom-submit">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="location-map">
+        <div class="location-map__wrapper">
+          <div class="location-map__extra-container">
+            <h3>Swift Navigation</h3>
+            <p class="nudge-up-20">
+              <br> 2148 3rd Street
+              <br> San Francisco CA 94107
+            </p><br>
+            <h5>Press Inquiries</h5><a href="mailto:press@swiftnav.com">press@swiftnav.com</a><br><br><br><a href="#" class="anim-button anim-button--flush-left">Explore Job Openings</a>
+          </div>
+          <div class="location-map__map-container"><img src="/images/location-map.jpg" class="location-map__map">
+            <p class="location-map__attr">Map tiles by <a href="#">Stamen Design</a>, under CC BY 3.0. Data by <a href="#">OpenStreetMap</a>, under <a href="#">ODbL</a>.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Notes: -->
+      <!-- -  'location-map--top-rule' modifier class is responsible for the horizontal rule above the maps. -->
+      <!-- -  Feel free to remove it in case the map shows up somewhere the separator isnt needed. -->
+      <div class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__address"><strong>Swift Navigation</strong><br> 2148 3rd Street
+            <br> San Francisco CA 94107
+          </div>
+          <ul class="footer__social-links">
+            <li class="footer__social-link"><a data-social="twitter" href="#"></a></li>
+            <li class="footer__social-link"><a data-social="linkedin" href="#"></a></li>
+            <li class="footer__social-link"><a data-social="github" href="#"></a></li>
+          </ul>
+          <div class="footer__links">
+            <div class="footer__link"><a href="#">Products</a></div>
+            <div class="footer__link"><a href="#">Solutions</a></div>
+            <div class="footer__link"><a href="#">Store</a></div>
+            <div class="footer__link"><a href="#">About</a></div>
+            <div class="footer__link"><a href="#">Join Us</a></div>
+            <div class="footer__link"><a href="#">Support</a></div>
+            <div class="footer__link"><a href="#">Contact</a></div>
+            <div class="footer__link"><a href="#">Forum</a></div>
+            <div class="footer__link"><a href="#">Documentation</a></div>
+            <div class="footer__link"><a href="#">My Account</a></div>
+            <div class="footer__link"><a href="#">Register</a></div>
+            <div class="footer__link"><a href="#">Login</a></div>
+          </div>
+          <div class="footer__legal">
+             
+            &copy; 2016 Swift Navigation, Inc. All rights reserved  &nbsp;|&nbsp; <a href="#">Terms and Conditions</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Sitemap</a> 
+          </div>
+        </div>
+      </div>
+      <!-- Notes: -->
+      <!-- - Dont worry about ordering the footer links with php, the javascript will handle any number of links and automatically sort them in to 4 columns. -->
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>

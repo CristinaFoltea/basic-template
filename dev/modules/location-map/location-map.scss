@@ -1,0 +1,23 @@
+@import '../../sass/module-includes';
+.location-map{ position: relative; width: 100%; @include module-spacing; overflow:hidden;}
+.location-map__wrapper{ width: 100%; max-width: $max-width; margin: 0 auto; @include clearfix; @include responsive-bumpers;}
+
+.location-map__extra-container,
+.location-map__map-container{ float:left;
+  > *:first-child{margin-top:0;}
+  &.location-map__extra-container{ width:30%; }
+  &.location-map__map-container{ width:70%; }
+  @include responsive(md){ float:none; margin-bottom:40px;
+    &.location-map__extra-container,
+    &.location-map__map-container{ width:100%; }
+  }
+}
+.location-map__map{ width:100%; height: auto;}
+.location-map__attr{ font-size:12px; @include font-secondary; font-weight:400;}
+
+.location-map__extra-container,
+.location-map__map-container{ @include transition(all 1000ms $ease-out-quint); opacity: 0;
+  &.location-map__extra-container{@include transform(translate3d(60px,0,0));}
+  &.location-map__map-container{@include transform(translate3d(0,60px,0));}
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

@@ -1,0 +1,19 @@
+@import '../../sass/module-includes';
+.static-hero{position: relative; width: 100%; padding-bottom: 36%; margin-bottom:40px;
+  @include responsive(xl){ padding: 0; height: 600px; }
+  @include responsive(lg){ padding-bottom: 55%; }
+}
+.static-hero__wrapper{@include fill-parent(); background: $grey-darker no-repeat center; background-size: cover; @include ghost-center('.static-hero__content'); text-align: center; padding: 0 40px;
+  @include responsive(sm){ padding: 0 20px; }
+}
+.static-hero__content{ padding-top: 40px;
+  @include responsive(lg){ padding-top: 50px; }
+  @include responsive(md){ padding-top: 60px; }
+  @include responsive(sm){ padding-top: 0; }
+}
+.static-hero__headline{ @include font-secondary; font-weight: 400; font-size: 60px; color: $white; margin: 0 0 10px 0;
+  @include responsive(lg){ font-size: 50px; }
+  @include responsive(md){ font-size: 44px; }
+  @include responsive(sm){ font-size: 32px; }
+  @include responsive(xs){ font-size: 26px; }
+}

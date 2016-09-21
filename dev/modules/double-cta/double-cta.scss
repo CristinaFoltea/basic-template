@@ -1,0 +1,35 @@
+@import '../../sass/module-includes';
+.double-cta{width:100%; @include module-spacing; padding-bottom:0 !important;}
+.double-cta__wrapper{width:100%; @include clearfix; position: relative;}
+.double-cta__left, .double-cta__right{ display: block; width:50%; height:100%; float:left; padding: 60px 40px;
+  @include responsive(md){ position:relative; float:none; width:100%; }
+}
+
+.double-cta__image{background-color: $grey-darker; position: absolute; top: 0; width:50%; height:100%; z-index: z-layer(base); background-size:cover; background-position: center;
+  .double-cta__left &{left:0;}
+  .double-cta__right &{left:50%;}
+  @include responsive(md){ width:100%;
+    .double-cta__right &{left:0;}
+  }
+}
+
+.double-cta__content{position: relative; color:$white; width:60%; max-width: $max-width/2; text-align: center; z-index: z-layer(base, +1);
+  .double-cta__left &{float:right; margin-right:70px;}
+  .double-cta__right &{float:left; margin-left:70px;}
+  .double-cta__left &, .double-cta__right &{
+    @include responsive(md){ float:none; margin:0 auto; };
+  }
+  @include responsive(md){ width:75%; }
+}
+
+.double-cta__header{margin:0; font-size: 32px; @include font-secondary; font-weight:400;}
+.double-cta__text{margin-bottom:50px; font-size: 18px; @include font-primary; font-weight:400;}
+
+
+//effects:
+.double-cta__left .double-cta__content{ @include transition(all 2000ms $ease-out-quint); @include transform(translate3d(0,50px,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.double-cta__right .double-cta__content{ @include transition(all 2000ms $ease-out-quint); @include transform(translate3d(0,-50px,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

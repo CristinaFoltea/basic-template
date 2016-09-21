@@ -1,0 +1,49 @@
+@import '../../sass/module-includes';
+.footer{ background-color: $grey-darker; @include responsive-bumpers; overflow:hidden;}
+.footer__wrapper{ position: relative; max-width:$max-width; width:100%; margin: 0 auto; padding: 40px 0; color: $white; @include clearfix; }
+.footer__address{ display: inline-block; vertical-align: top; line-height:1.4;
+  @include responsive(md){display: block; width:100%; margin-bottom:20px;}
+}
+.footer__links{display: block; float:right; width:70%; margin: 0; padding: 0;
+  @include responsive(md){display: block; width:100%; float:none; margin-bottom:20px; @include clearfix; }
+}
+.footer__link-column{display: block; float:left; width:25%;
+  @include responsive(md){display: block; width:50%; text-align: left; }
+}
+.footer__link{display:block; list-style: none; width:100%; margin-bottom: 15px; font-size:15px;
+  a{color: $white; text-decoration: none; font-weight:400;}
+  &:hover a{color: $orange;}
+}
+.footer__social-links{position: absolute; bottom:40px; left:0px; margin: 0;padding: 0;
+  @include responsive(md){ position: relative; width:100%; text-align: left; margin-bottom:20px; bottom:auto;}
+}
+.footer__social-link{display: inline-block; list-style: none;
+  a{position: relative; margin-right:15px; z-index: z-layer(base, +1); font-weight:400;}
+  [data-social]{display: inline-block; width:18px; @include transition(all 600ms $ease-out-quint);}
+  [data-social="twitter"]{ @include sprite(social-twitter, 0.5); height:15px;}
+  [data-social="linkedin"]{ @include sprite(social-linkedin, 0.5); height:18px;}
+  [data-social="github"]{ @include sprite(social-github, 0.5); height:15px;}
+  &:hover{
+    [data-social]{@include transform(scale3d(1.2,1.2,1));}
+  }
+}
+.footer__legal{display: block; width:70%; float: right; font-size: 13px; margin-top:20px;
+  a{color: $white; text-decoration: none; font-weight:400;}
+  a:hover{color: $orange;}
+  @include responsive(md){ font-size:12px; width:100%; float:none;}
+}
+
+
+//effects:
+.footer__link{ @include transition(all 1000ms $ease-out-quint); @include transform(translate3d(30px,0,0)); opacity: 0; @include transition-sequence(50ms, 6);
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.footer__address{ @include transition(all 600ms $ease-out-quint); @include transform(translate3d(50px,0,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.footer__social-links{ @include transition(all 800ms $ease-out-quint); @include transform(translate3d(-20px,0,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.footer__legal{ @include transition(all 800ms $ease-out-sine); @include transform(translate3d(20px,0,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

@@ -1,0 +1,5 @@
+@import '../../sass/module-includes';
+.full-width-image{position: relative; width: 100%; padding-bottom: 45%; background: $grey-darker no-repeat center; background-size: cover; margin: 20px 0;
+  @include responsive(xl){ padding: 0; height: 800px; }
+  @include responsive(lg){ padding-bottom: 55%; }
+}

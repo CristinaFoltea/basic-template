@@ -1,0 +1,22 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/team-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Our Team
+      
+      include ../modules/team-grid/team-grid.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

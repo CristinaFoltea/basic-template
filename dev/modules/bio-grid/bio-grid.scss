@@ -1,0 +1,30 @@
+@import '../../sass/module-includes';
+.bio-grid{ width:100%; @include responsive-bumpers; @include module-spacing; }
+.bio-grid__wrapper{ width:100%; max-width:$max-width; margin:0 auto;}
+.bio-grid__items{margin: 0; padding: 0; width: 100%; text-align: center;}
+.bio-grid__item{display: inline-block; position: relative; width:33%; padding: 0 20px; margin-bottom:40px; vertical-align: top; text-align: left;
+  @include responsive(lg){width:49.5%;}
+  @include responsive(md){width:100%;}
+  @include responsive(sm){padding: 0 10px;}
+}
+
+.bio-grid__face-card{position: relative; display: block; height:160px; width:100%; @include linear-gradient(to bottom, $grey-darker, $grey-dark);
+  @include responsive(sm){height:120px;}
+}
+.bio-grid__image{display: block; position: absolute; top: 0; left: 0; height:160px; width:160px; background: $grey-darker center no-repeat; background-size: cover;
+  @include responsive(sm){height:120px; width:120px;}
+}
+.bio-grid__card-content{display: block; padding:20px 10px 20px 175px; color: $white;
+  @include responsive(sm){padding-left:135px;}
+
+}
+.bio-grid__name{display: block; @include font-secondary; font-size:18px; font-weight:800; margin-bottom:15px;
+  @include responsive(sm){font-size:16px; margin-bottom:8px;}
+}
+.bio-grid__position{display: block; @include font-secondary; font-size:12px; font-weight:400; line-height:1.4;}
+.bio-grid__text{font-size:15px; @include font-primary; font-weight:400;}
+//effects
+.bio-grid__item{ @include transition(all 900ms $ease-out-quad); @include transform(translate3d(0,30px,0)); opacity: 0;
+  &:nth-child(2n){@include transform(translate3d(0,-30px,0)); @include transition-delay(50ms);}
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

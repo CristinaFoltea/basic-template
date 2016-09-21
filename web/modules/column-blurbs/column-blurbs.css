@@ -1,0 +1,135 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+.column-blurbs {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media (max-width: 1100px) {
+    .column-blurbs {
+      padding-left: 40px;
+      padding-right: 40px; } }
+  @media (max-width: 419px) {
+    .column-blurbs {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media (max-width: 619px) {
+    .column-blurbs {
+      padding-top: 10px;
+      padding-bottom: 10px; } }
+
+.column-blurbs__wrapper {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto; }
+
+.column-blurbs__items {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center; }
+
+.column-blurbs__item {
+  display: inline-block;
+  position: relative;
+  width: 33%;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  vertical-align: top;
+  text-align: left; }
+  [data-count="3"] .column-blurbs__item {
+    margin-bottom: 10px; }
+  [data-count="2"] .column-blurbs__item {
+    width: 49.5%; }
+  [data-count="1"] .column-blurbs__item {
+    width: 100%; }
+  @media (max-width: 1100px) {
+    .column-blurbs__item {
+      width: 49.5%; }
+      [data-count="3"] .column-blurbs__item {
+        margin-bottom: 40px; }
+      [data-count="2"] .column-blurbs__item {
+        width: 49.5%; } }
+  @media (max-width: 767px) {
+    .column-blurbs__item {
+      width: 100%; }
+      [data-count="2"] .column-blurbs__item {
+        width: 100%; } }
+  @media (max-width: 619px) {
+    .column-blurbs__item {
+      padding: 0; } }
+
+.column-blurbs__icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 20px; }
+  @media (max-width: 619px) {
+    .column-blurbs__icon {
+      left: 0; } }
+
+.column-blurbs__content {
+  width: 100%;
+  padding-left: 80px; }
+
+.column-blurbs__header {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5; }
+
+.column-blurbs__text {
+  font-size: 15px;
+  line-height: 1.5; }
+
+.column-blurbs--force-two-columns .column-blurbs__item {
+  width: 49.5%; }
+  @media (max-width: 1100px) {
+    .column-blurbs--force-two-columns .column-blurbs__item {
+      width: 49.5%; }
+      [data-count="2"] .column-blurbs--force-two-columns .column-blurbs__item {
+        width: 49.5%; } }
+  @media (max-width: 767px) {
+    .column-blurbs--force-two-columns .column-blurbs__item {
+      width: 100%; }
+      [data-count="2"] .column-blurbs--force-two-columns .column-blurbs__item {
+        width: 100%; } }
+
+.column-blurbs__item {
+  -webkit-transition: all 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transform: translate3d(0, 30px, 0);
+  -moz-transform: translate3d(0, 30px, 0);
+  -ms-transform: translate3d(0, 30px, 0);
+  -o-transform: translate3d(0, 30px, 0);
+  transform: translate3d(0, 30px, 0);
+  opacity: 0; }
+  .column-blurbs__item:nth-child(2n) {
+    -webkit-transform: translate3d(0, -30px, 0);
+    -moz-transform: translate3d(0, -30px, 0);
+    -ms-transform: translate3d(0, -30px, 0);
+    -o-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    transition-delay: 50ms; }
+  .js-in-view .column-blurbs__item {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }

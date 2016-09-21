@@ -1,0 +1,50 @@
+@import '../../sass/module-includes';
+
+.image-grid{position: relative; width:100%; padding-bottom: 40%; margin-top:40px; margin-bottom: -1px;
+  @include responsive(xl){ padding: 0; height: 680px; }
+  @include responsive(lg){ padding-bottom: 55%; }
+  @include responsive(md){ padding:0; height:auto; }
+}
+.image-grid__wrapper{ @include fill-parent(); overflow:hidden;
+  @include responsive(md){ position: relative; }
+}
+.image-grid__items{ width:100%; height:100%; display: table;
+  @include responsive(md){display: block;}
+}
+.image-grid__item-row{ display: table-row; width:100%;
+  @include responsive(md){display: block;}
+}
+.image-grid__row-container{ display: table-cell; width:100%; height:50%;
+  @include responsive(md){display: block;}
+}
+.image-grid__item{ position: relative; height:100%; vertical-align: middle; width:100%; text-align: center; float:left; @include ghost-center('.image-grid__item-text'); overflow:hidden;
+  @include responsive(md){height:250px;}
+  [data-count="2"] &{width:50%;}
+  [data-count="3"] &{width:33.33333%;}
+  [data-count] &{
+    @include responsive(md){width:100%;}
+  }
+}
+.image-grid__item-image{ position: relative; background: $grey-darker center no-repeat; background-size:cover; @include fill-parent; z-index: z-layer(abyss); }
+.image-grid__item-text{ vertical-align: middle; font-size: 32px; color: $white; @include font-secondary; font-weight:400; text-decoration: none; }
+
+.image-grid__link{@include anchor-fill;}
+
+//modifers:
+
+.image-grid.image-grid--fade-images .image-grid__item-image,
+.image-grid__item-image.image-grid--fade-image{
+  &:after{content: ''; display: block; @include fill-parent(); background-color: $grey-darker; opacity:0.25;}
+}
+
+//effects:
+.image-grid__item-text{ @include transition(all 1000ms $ease-out-quad); @include transform(translate3d(25px,25px,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.image-grid__item:nth-child(odd) .image-grid__item-text{ @include transition-delay(100ms); @include transform(translate3d(-25px,-25px,0));
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+
+.image-grid__item-image{ @include transition(all 500ms $ease-out-quad); @include transform(scale3d(1,1,1));
+  .image-grid__item:hover &{ @include transform(scale3d(1.025,1.025,1)); @include filter(brightness(1.1) contrast(1.2)); }
+}

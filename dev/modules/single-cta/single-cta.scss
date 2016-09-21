@@ -1,0 +1,39 @@
+@import '../../sass/module-includes';
+.single-cta{ position: relative; width:100%; padding-bottom: 36%;
+  @include responsive(xl){ padding: 0; height: 600px; }
+  @include responsive(lg){ padding-bottom: 55%; }
+  @include responsive(sm){ padding:0; height:auto; }
+}
+.single-cta__wrapper{@include fill-parent(); background: $grey-darker left center no-repeat; background-size:cover;
+  @include responsive(sm){ position: relative; height:auto; padding:40px 20px;
+    &:before{content: ''; display: block; @include fill-parent(); background-color: $grey-darker; opacity:0.6; z-index: z-layer(base);}
+  }
+}
+.single-cta__container{position: relative; width:100%; max-width: $max-width; margin: 0 auto; height:100%; @include ghost-center('.single-cta__content'); text-align: right; z-index: z-layer(base, +1);}
+.single-cta__content{color: $white; width:50%; padding-right:10%; text-align: center;
+  @include responsive(md){ width:60%; padding-right:5%; }
+  @include responsive(sm){ width:100%; padding-right:0; }
+}
+.single-cta__header{@include font-secondary; font-weight:400px; font-size:32px; color: $white;}
+.single-cta__text{@include font-primary; font-size:18px; line-height:1.4; font-weight:400px;}
+.single-cta__action{margin-top:40px;}
+
+//modifiers:
+.single-cta.single-cta--left-align{
+  .single-cta__wrapper{ background-position:right center; }
+  .single-cta__container{ text-align: left; }
+  .single-cta__content{ padding-left:10%; padding-right:0;
+    @include responsive(md){ padding-left:5%; padding-right:0; }
+    @include responsive(sm){ width:100%; padding-left:0; }
+  }
+
+}
+
+
+//effects
+.single-cta__header, .single-cta__action{ @include transition(all 600ms $ease-out-quad); @include transform(translate3d(-30px,0,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}
+.single-cta__text{ @include transition(all 800ms $ease-out-quad); @include transform(translate3d(30px,0,0)); opacity: 0;
+  .js-in-view &{ @include transform(translate3d(0,0,0)); opacity: 1; }
+}

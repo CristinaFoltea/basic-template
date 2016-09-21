@@ -1,0 +1,66 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+    
+      include ../modules/navigation/navigation.jade
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/survey-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Survey
+            
+      include ../modules/column-list/column-list.jade
+      
+      hr
+      
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_centimeter-accuracy.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Improve Precision and Longevity
+                p.column-blurbs__text 
+                  | Swift RTK solutions integrate easily with UAVs to achieve precision landing scenarios. For example, UAVs using Swift RTK can initiate a landing at 30’ instead of 300’. The ability to control landings more precisely results in a longer UAV service life.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_improve-quality.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Improve Output Quality
+                p.column-blurbs__text 
+                  | High-precision RTK technology increases the quality of final orthomosaics to improve decision-making.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_affordability-and-flexibility.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Unprecedented Affordability
+                p.column-blurbs__text 
+                  | At a fraction of the cost of hardware-based, traditional GPS solutions, Swift solutions make it possible to achieve new functionality cost-effectively for large deployments.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_reduce-training-cost.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Reduce Pilot Training Costs
+                p.column-blurbs__text 
+                  | High-precision accuracy and easy controls let even novice pilots control UAVs more accurately to reduce training costs.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_reduce-lifecycle-cost.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Reduce UAV Lifecycle Costs
+                p.column-blurbs__text 
+                  | With Swift solutions, you can use existing base stations for ground control. Swift RTK technology is software-based, which eliminates the need for costly, inflexible hardware systems and enables you to reduce capital cost for improved profitability. In addition, you can use Swift RTK technology with existing base stations to avoid having to purchase new ground systems.
+      
+      .generic-content.generic-content--center.nudge-up-20
+        .generic-content__wrapper
+          .generic-content__content
+            a.anim-button(href="contact.html") Contact Swift
+            | &nbsp;or&nbsp;
+            a.anim-button(href="store-landing.html") Buy Piksi
+            
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

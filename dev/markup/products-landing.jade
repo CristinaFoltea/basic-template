@@ -1,0 +1,29 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      include ../modules/static-hero/static-hero.jade
+      
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header 
+            | Navigation is all about accuracy, especially when it comes to autonomous devices 
+            | that perform mission-critical functions. Standard GPS technology is no longer 
+            | good enough for an automated future. Swift Navigation is taking a new direction 
+            | to developing autonomous navigation capabilities.
+          p.header-and-text__text
+      
+      include ../modules/column-blurbs/column-blurbs.jade
+      include ../modules/single-cta/single-cta.jade
+      include ../modules/quote-block/quote-block.jade
+      
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")

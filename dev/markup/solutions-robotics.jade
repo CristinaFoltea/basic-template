@@ -1,0 +1,54 @@
+doctype html
+html(lang="en-US")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Module Test
+    link(rel='stylesheet', href='css/app.css')
+  body
+    .page-wrapper
+      include ../modules/navigation/navigation.jade
+      
+      
+      .static-hero
+        .static-hero__wrapper(style="background-image: url(/images/robo-hero.jpg)")
+          .static-hero__content
+            h2.static-hero__headline Robotics
+            
+      .header-and-text
+        .header-and-text__wrapper
+          h3.header-and-text__header Robotic systems are being extended to many innovative applications outside of traditional manufacturing. From use in standalone autonomous devices and machines to embedded navigation in sensor networks or larger navigation platforms, Swift’s low-cost, software-based RTK solutions enable new possibilities and cost-effective development.
+          
+      .column-blurbs
+        .column-blurbs__wrapper
+          ul.column-blurbs__items
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_flexibility-across-environments.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Flexibility Across Environments
+                p.column-blurbs__text 
+                  | Swift’s RTK solutions have broad application across vertical applications and physical environments. Customers in environmental, consumer, security, automotive and marine systems can use Swift for everything from research and development to marine surveys, sensor networks and optimizing routine processes via robotic vehicle control.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_open-source.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Driving Innovation
+                p.column-blurbs__text 
+                  | Because Swift RTK solutions are built on open source software, customers can easily tailor and adapt features to their projects’ unique requirements. Swift removes the obstacles to innovation.
+            li.column-blurbs__item
+              img.column-blurbs__icon(src="/images/icon_minimize-risk.png")
+              .column-blurbs__content
+                h4.column-blurbs__header Minimizing Risk
+                p.column-blurbs__text 
+                  | Minimize the risk of solution failure with Swift. We design for a broad range of field conditions to help ensure project success. Low cost and the ability to upgrade software continuously, deliver further assurance and future-proofing.
+      
+      .generic-content.generic-content--center
+        .generic-content__wrapper
+          .generic-content__content
+            a.anim-button(href="contact.html") Contact Swift
+            | &nbsp;or&nbsp;
+            a.anim-button(href="store-landing.html") Buy Piksi
+            
+      include ../modules/footer/footer.jade
+    
+      script(src="js/app.js")
